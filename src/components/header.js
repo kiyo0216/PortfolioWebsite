@@ -28,9 +28,9 @@ const Header = ({ siteTitle }) => (
         </a>
       </li>
       <li>
-        <p onClick={() => scrollTo('#top')}>
+        <a href="#" onClick={() => scrollTo('#top')}>
           Top
-        </p>
+        </a>
       </li>
     </ul>
   </header>
