@@ -2,32 +2,37 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import scrollTo from "gatsby-plugin-smoothscroll"
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+  <header>
+    <ul className="nav" id="top">
+      <li>
+        <Link to="/">
+          Home
         </Link>
-      </h1>
-    </div>
+      </li>
+      <li>
+        <Link to="/works">
+          Works
+        </Link>
+      </li>
+      <li>
+        <Link to="/about">
+          About
+        </Link>
+      </li>
+      <li>
+        <a href="Kiyotaka Akaiwa Resume.pdf" download>
+          Resume
+        </a>
+      </li>
+      <li>
+        <p onClick={() => scrollTo('#top')}>
+          Top
+        </p>
+      </li>
+    </ul>
   </header>
 )
 
