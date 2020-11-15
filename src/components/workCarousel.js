@@ -42,20 +42,40 @@ const WorkCarousel = () => {
     });
 
     imagesRef.current.forEach((el, index) => {
-      TweenLite.set(el, {
-        css: {
-          rotationY: index * 360 / 4,
-          transformOrigin: "50% 50% -500"
-        }
-      });
-      TweenMax.to(el, 20, {
-        css: {
-          z:0.01,
-          rotationY: "+=359"
-        },
-        repeat: -1,
-        ease: Linear.easeNone
-      });
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        TweenLite.set(el, {
+          css: {
+            rotationX: index * 360 / 4,
+            transformOrigin: "50% 50% -120"
+          }
+        });
+
+        TweenMax.to(el, 20, {
+          css: {
+            z:0.01,
+            rotationX: "-=359"
+          },
+          repeat: -1,
+          ease: Linear.easeNone
+        });
+      } else {
+        var x = window.screen.width * -0.3
+        TweenLite.set(el, {
+          css: {
+            rotationY: index * 360 / 4,
+            transformOrigin: `50% 50% ${x}`
+          }
+        });
+
+        TweenMax.to(el, 20, {
+          css: {
+            z:0.01,
+            rotationY: "+=359"
+          },
+          repeat: -1,
+          ease: Linear.easeNone
+        });
+      }
     });
   });
 

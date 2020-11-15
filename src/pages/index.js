@@ -34,47 +34,53 @@ const IndexPage = () => (
           <div className="index-content-2">
             <div className="skills-container">
               <h2>Frameworks</h2>
-              <div className="skill">
-                <Image filename="react.png" alt="react icon" />
-                <h3>React</h3>
-              </div>
-              <div className="skill">
-                <Image filename="gatsby.png" alt="react icon" />
-                <h3>Gatsby.js</h3>
-              </div>
-              <div className="skill">
-                <Image filename="node.png" alt="react icon" />
-                <h3>Node.js</h3>
+              <div className="skills">
+                <div className="skill">
+                  <Image filename="react.png" alt="react icon" />
+                  <h3>React</h3>
+                </div>
+                <div className="skill">
+                  <Image filename="gatsby.png" alt="react icon" />
+                  <h3>Gatsby.js</h3>
+                </div>
+                <div className="skill">
+                  <Image filename="node.png" alt="react icon" />
+                  <h3>Node.js</h3>
+                </div>
               </div>
             </div>
             <div className="skills-container">
               <h2>Languages</h2>
-              <div className="skill">
-                <Image filename="html.png" alt="react icon" />
-                <h3>HTML</h3>
-              </div>
-              <div className="skill">
-                <Image filename="css.png" alt="react icon" />
-                <h3>CSS</h3>
-              </div>
-              <div className="skill">
-                <Image filename="js.png" alt="react icon" />
-                <h3>JavaScript</h3>
+              <div className="skills">
+                <div className="skill">
+                  <Image filename="html.png" alt="react icon" />
+                  <h3>HTML</h3>
+                </div>
+                <div className="skill">
+                  <Image filename="css.png" alt="react icon" />
+                  <h3>CSS</h3>
+                </div>
+                <div className="skill">
+                  <Image filename="js.png" alt="react icon" />
+                  <h3>JavaScript</h3>
+                </div>
               </div>
             </div>
             <div className="skills-container">
               <h2>Tools</h2>
-              <div className="skill">
-                <Image filename="adobe-xd.png" alt="react icon" />
-                <h3>Adobe XD</h3>
-              </div>
-              <div className="skill">
-                <Image filename="vim.png" alt="react icon" />
-                <h3>Vim</h3>
-              </div>
-              <div className="skill">
-                <Image filename="aws.png" alt="react icon" />
-                <h3>AWS</h3>
+              <div className="skills">
+                <div className="skill">
+                  <Image filename="adobe-xd.png" alt="react icon" />
+                  <h3>Adobe XD</h3>
+                </div>
+                <div className="skill">
+                  <Image filename="vim.png" alt="react icon" />
+                  <h3>Vim</h3>
+                </div>
+                <div className="skill">
+                  <Image filename="aws.png" alt="react icon" />
+                  <h3>AWS</h3>
+                </div>
               </div>
             </div>
           </div>

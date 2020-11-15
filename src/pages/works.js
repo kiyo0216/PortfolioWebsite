@@ -56,6 +56,43 @@ class WorksPage extends Component {
     })
   }
 
+  componentDidMount() {
+    const interval = setInterval(() => {
+      if (this.state.image1 == true) {
+        this.setState({
+          image1: false,
+          image2: true,
+          image3: false,
+          image4: false
+        })
+      } else if (this.state.image2 == true) {
+        this.setState({
+          image1: false,
+          image2: false,
+          image3: true,
+          image4: false
+        })
+      } else if (this.state.image3 == true) {
+        this.setState({
+          image1: false,
+          image2: false,
+          image3: false,
+          image4: true
+        })
+      } else if (this.state.image4 == true) {
+        this.setState({
+          image1: true,
+          image2: false,
+          image3: false,
+          image4: false
+        })
+      }
+    }, 3000);
+    return () => {
+      clearInterval(interval);
+    }
+  };
+
   render() {
     return (
       <Layout>
@@ -66,20 +103,22 @@ class WorksPage extends Component {
               Kiyotaka Akaiwa
             </h2>
             <div className="works-content-1">
-              <div className="images-stack">
-                <a href="http://aritaclinic.s3-website-us-east-1.amazonaws.com/" target="blank">
-                  <Image style={{zIndex: this.state.image1 ? "1" : "0"}} filename="aritaclinic1.png" alt="arita clinic picture 1" />
-                  <Image style={{zIndex: this.state.image2 ? "1" : "0"}} filename="aritaclinic2.png" alt="arita clinic picture 1" />
-                  <Image style={{zIndex: this.state.image3 ? "1" : "0"}} filename="aritaclinic3.png" alt="arita clinic picture 1" />
-                  <Image style={{zIndex: this.state.image4 ? "1" : "0"}} filename="aritaclinic4.png" alt="arita clinic picture 1" />
-                </a>
-              </div>
-              <h2 className="work-title">Dr. Arita<br />Pain Clinic</h2>
-              <div className="slider-selector">
-                <div className={this.state.image1 ? "vertical-line selected" : "vertical-line "} onMouseEnter={() => this.image1()}></div>
-                <div className={this.state.image2 ? "vertical-line selected" : "vertical-line "} onMouseEnter={() => this.image2()}></div>
-                <div className={this.state.image3 ? "vertical-line selected" : "vertical-line "} onMouseEnter={() => this.image3()}></div>
-                <div className={this.state.image4 ? "vertical-line selected" : "vertical-line "} onMouseEnter={() => this.image4()}></div>
+              <div className="work-container">
+                <div className="images-stack">
+                  <a href="http://aritaclinic.s3-website-us-east-1.amazonaws.com/" target="blank">
+                    <Image style={{zIndex: this.state.image1 ? "1" : "0"}} filename="aritaclinic1.png" alt="arita clinic picture 1" />
+                    <Image style={{zIndex: this.state.image2 ? "1" : "0"}} filename="aritaclinic2.png" alt="arita clinic picture 1" />
+                    <Image style={{zIndex: this.state.image3 ? "1" : "0"}} filename="aritaclinic3.png" alt="arita clinic picture 1" />
+                    <Image style={{zIndex: this.state.image4 ? "1" : "0"}} filename="aritaclinic4.png" alt="arita clinic picture 1" />
+                  </a>
+                </div>
+                <h2 className="work-title">Dr. Arita<br />Pain Clinic</h2>
+                <div className="slider-selector">
+                  <div className={this.state.image1 ? "vertical-line selected" : "vertical-line "} onMouseEnter={() => this.image1()}></div>
+                  <div className={this.state.image2 ? "vertical-line selected" : "vertical-line "} onMouseEnter={() => this.image2()}></div>
+                  <div className={this.state.image3 ? "vertical-line selected" : "vertical-line "} onMouseEnter={() => this.image3()}></div>
+                  <div className={this.state.image4 ? "vertical-line selected" : "vertical-line "} onMouseEnter={() => this.image4()}></div>
+                </div>
               </div>
             </div>
             <div className="works-content-2">
@@ -87,6 +126,7 @@ class WorksPage extends Component {
                 <h2>
                   Contact now to
                 </h2>
+                <br />
                 <h2>
                   start a project with me
                 </h2>
@@ -104,7 +144,7 @@ class WorksPage extends Component {
             <Footer />
           </div>
           <div className="nav-background">
-            <div className="background-1"></div>
+            <div className="background-4"></div>
           </div>
         </div>
       </Layout>
