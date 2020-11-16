@@ -3,24 +3,25 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import scrollTo from "gatsby-plugin-smoothscroll"
+import AniLink from "gatsby-plugin-transition-link/Anilink"
 
 const Header = ({ siteTitle }) => (
   <header>
     <ul className="nav" id="top">
       <li>
-        <Link to="/">
+        <AniLink cover bg="#FFFFFF" to="/">
           Home
-        </Link>
+        </AniLink>
       </li>
       <li>
-        <Link to="/works">
+        <AniLink cover bg="#FFFFFF" to="/works">
           Works
-        </Link>
+        </AniLink>
       </li>
       <li>
-        <Link to="/about">
+        <AniLink cover bg="#FFFFFF" to="/about">
           About
-        </Link>
+        </AniLink>
       </li>
       <li>
         <a href="Kiyotaka Akaiwa Resume.pdf" download>
