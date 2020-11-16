@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import scrollTo from "gatsby-plugin-smoothscroll"
-import AniLink from "gatsby-plugin-transition-link/Anilink"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Header = ({ siteTitle }) => (
   <header>
